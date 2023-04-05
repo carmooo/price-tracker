@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import pandas as pd
 
 
 def scrape_product_price(product_id):
@@ -21,7 +20,4 @@ def scrape_product_price(product_id):
 
     price_cleaned = price_raw.strip().replace('.', '').replace(',', '.')
 
-    data = {'Product ID': [product_id], 'Price': [price_cleaned]}
-    df = pd.DataFrame(data)
-
-    return df
+    return price_cleaned

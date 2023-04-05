@@ -10,9 +10,15 @@ packages = [{include = "price_tracker"}]
 python = "^3.11"
 requests = "^2.28.2"
 beautifulsoup4 = "^4.12.1"
-pandas = "^2.0.0"
+fastapi = "^0.95.0"
+uvicorn = "^0.21.1"
+taskipy = "^1.10.4"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+uvicorn = "uvicorn price-tracker.app:app --reload"
+dev = "task uvicorn --reload"
