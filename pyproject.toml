@@ -8,6 +8,9 @@ packages = [{include = "price_tracker"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+requests = "^2.28.2"
+beautifulsoup4 = "^4.12.1"
+pandas = "^2.0.0"
 
 
 [build-system]
